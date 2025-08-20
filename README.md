@@ -1,73 +1,165 @@
-# Welcome to your Lovable project
+# Shenanigan's CardStop
 
-## Project info
+A comprehensive website for Shenanigan's CardStop, a premier Magic: The Gathering specialty store.
 
-**URL**: https://lovable.dev/projects/9ef22582-009e-4762-8f1f-08724c248adc
+## Features
 
-## How can I edit this code?
+### 🏪 Store Pages
+- **Homepage** - Hero section, featured products, upcoming events, and store information
+- **Shop** - Comprehensive inventory with advanced filtering, search, and categories
+- **Events** - Tournament calendar, registration system, and results tracking
+- **About** - Store information, staff profiles, policies, and contact details
+- **Community** - Player leaderboards, discussion forums, and social integration
 
-There are several ways of editing your application.
+### 🎯 Key Functionality
+- **Product Catalog** - Singles, booster packs, preconstructed decks, and accessories
+- **Event Management** - Tournament registration, formats (Draft, Standard, Commander, etc.)
+- **Community Features** - Player rankings, discussion boards, social links
+- **Store Information** - Hours, location, contact details, policies
 
-**Use Lovable**
+### 🎨 Design System
+- **MTG-Themed UI** - Dark slate color scheme with blue/purple accents
+- **Responsive Design** - Mobile-first approach with Tailwind CSS
+- **Component Library** - Built on shadcn/ui for consistency
+- **Accessibility** - Proper ARIA labels and keyboard navigation
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/9ef22582-009e-4762-8f1f-08724c248adc) and start prompting.
+## Technology Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Frontend**: React 18 + TypeScript + Vite
+- **Styling**: Tailwind CSS + shadcn/ui components
+- **State Management**: TanStack Query
+- **Routing**: React Router DOM
+- **Build Tool**: Vite with SWC
+- **Development**: ESLint + TypeScript strict mode
 
-**Use your preferred IDE**
+## Getting Started
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Prerequisites
+- Node.js 18+ and npm
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Installation
+```bash
+# Install dependencies
+npm install
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server (runs on port 8080, or next available port)
 npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+
+# Lint code
+npm run lint
 ```
 
-**Edit a file directly in GitHub**
+### Development Server
+The dev server runs on `http://localhost:8080` (or next available port) with network access enabled.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Project Structure
 
-**Use GitHub Codespaces**
+```
+src/
+├── components/          # Reusable UI components
+│   ├── ui/             # shadcn/ui component library
+│   ├── Navbar.tsx      # Main navigation
+│   └── Footer.tsx      # Site footer
+├── pages/              # Page components
+│   ├── Index.tsx       # Homepage
+│   ├── Shop.tsx        # Product catalog
+│   ├── Events.tsx      # Tournament calendar
+│   ├── About.tsx       # Store information
+│   └── Community.tsx   # Community hub
+├── lib/                # Utilities and configs
+└── hooks/              # Custom React hooks
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Features by Page
 
-## What technologies are used for this project?
+### Homepage (`/`)
+- Hero section with store branding
+- Quick stats (years in business, cards in stock, etc.)
+- Featured product showcase
+- Upcoming events preview
+- Store visit information with hours and location
 
-This project is built with:
+### Shop (`/shop`)
+- Product grid with card images and pricing
+- Advanced filtering by category, set, rarity, condition
+- Search functionality across all products
+- Product categories: Singles, Boosters, Precons, Accessories
+- Shopping cart integration ready
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Events (`/events`)
+- Upcoming tournament listings
+- Event registration with capacity tracking
+- Format badges (Draft, Standard, Commander, etc.)
+- Recent tournament results
+- Calendar integration ready
 
-## How can I deploy this project?
+### About (`/about`)
+- Store mission and history
+- Staff member profiles
+- Store policies (returns, trade-ins, tournaments)
+- Contact information and hours
+- Store statistics and achievements
 
-Simply open [Lovable](https://lovable.dev/projects/9ef22582-009e-4762-8f1f-08724c248adc) and click on Share -> Publish.
+### Community (`/community`)
+- Player leaderboards with rankings
+- Recent tournament results and winners
+- Discussion forums with hot topics
+- Social media integration
+- Format-specific filtering
 
-## Can I connect a custom domain to my Lovable project?
+## Customization
 
-Yes, you can!
+### Content Management
+All content can be easily updated by modifying the respective page components. Key data includes:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- **Store Information**: Located in Footer.tsx and About.tsx
+- **Product Data**: Sample data in Shop.tsx (ready for API integration)
+- **Event Data**: Sample events in Events.tsx and Index.tsx
+- **Staff Information**: Staff profiles in About.tsx
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+### Styling
+The design uses a consistent MTG-themed color palette:
+- **Primary**: Slate grays (900, 800, 700) for backgrounds
+- **Accents**: Blue (600-700) for interactive elements
+- **Success**: Green (600-700) for positive actions
+- **Warning**: Purple (600-700) for format badges
+- **Text**: White/slate-300 for readability on dark backgrounds
+
+### API Integration
+The application is structured to easily integrate with:
+- **TCGPlayer API** for real-time pricing and product data
+- **Tournament Management** systems for event registration
+- **Inventory Management** systems for stock tracking
+- **Payment Processing** for online orders
+
+## Future Enhancements
+
+- **Shopping Cart & Checkout** - Complete e-commerce functionality
+- **User Accounts** - Customer registration and order history
+- **Real-time Inventory** - Live stock updates and pricing
+- **Tournament Brackets** - Interactive tournament trees
+- **Admin Panel** - Content management and inventory control
+- **Mobile App** - React Native version for mobile users
+
+## Contributing
+
+This website was built with modern web development best practices:
+- Component-driven architecture
+- TypeScript for type safety
+- Responsive design patterns
+- SEO optimization
+- Performance optimizations
+
+## License
+
+© 2024 Shenanigan's CardStop. All rights reserved.
+
+---
+
+**Note**: This is a demonstration website for a fictional MTG store. All store information, events, and products are sample data for demonstration purposes.
