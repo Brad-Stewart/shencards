@@ -18,6 +18,13 @@ export default function HeroSplit() {
         <div className="absolute inset-0 bg-gradient-to-br from-business-primary via-business-primary/95 to-business-secondary"></div>
         <div className="relative z-10 text-center px-8 max-w-lg">
           <div className="space-y-6">
+            <div className="mb-6">
+              <img 
+                src="/lovable-uploads/c66a1938-3fc8-4d7d-96de-c7ddbc167934.png" 
+                alt="Brad Stewart - Professional headshot" 
+                className="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto object-cover border-4 border-white/30 shadow-lg"
+              />
+            </div>
             <div className="space-y-2">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
                 Business Solutions
@@ -63,6 +70,13 @@ export default function HeroSplit() {
         <div className="absolute inset-0 bg-gradient-to-br from-dev-primary via-dev-primary/95 to-dev-secondary"></div>
         <div className="relative z-10 text-center px-8 max-w-lg">
           <div className="space-y-6">
+            <div className="mb-6">
+              <img 
+                src="/lovable-uploads/95084d1d-6e6d-4d1a-ace1-e24e5bd97af9.png" 
+                alt="Brad Stewart - Casual headshot" 
+                className="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto object-cover border-4 border-dev-accent/50 shadow-lg"
+              />
+            </div>
             <div className="space-y-2">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
                 Programmer
