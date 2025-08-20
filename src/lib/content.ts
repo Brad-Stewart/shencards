@@ -72,6 +72,6 @@ I work primarily with JavaScript/TypeScript and Python, building dashboards, aut
       "If you're scaling operations or modernizing processes with targeted software, I'd be glad to help.",
     email: "bradmichaelstewart@gmail.com",
     linkedin: "https://www.linkedin.com/in/your-handle",
-    github: "https://github.com/your-handle"
+    github: "https://github.com/Brad-Stewart"
   }
 };
