@@ -20,22 +20,40 @@ const Index = () => {
 
   const featuredProducts = [
     {
-      name: "The Lord of the Rings Collector Booster",
+      name: "Murders at Karlov Manor Collector Booster",
       price: 24.99,
       image: "/placeholder.svg",
       badge: "New Release"
     },
     {
-      name: "Lightning Bolt - Masters 25",
-      price: 2.99,
+      name: "The One Ring",
+      price: 85.99,
       image: "/placeholder.svg",
-      badge: "Popular"
+      badge: "Hot Item"
     },
     {
-      name: "Commander Deck - Draconic Dissent",
-      price: 39.99,
+      name: "Rhystic Study",
+      price: 24.99,
+      image: "/placeholder.svg",
+      badge: "Commander Staple"
+    },
+    {
+      name: "Force of Will",
+      price: 89.99,
+      image: "/placeholder.svg",
+      badge: "Legacy Power"
+    },
+    {
+      name: "Deadly Disguise - Commander Deck",
+      price: 42.99,
       image: "/placeholder.svg",
       badge: "Best Seller"
+    },
+    {
+      name: "Sheoldred, the Apocalypse",
+      price: 52.99,
+      image: "/placeholder.svg",
+      badge: "Standard All-Star"
     }
   ];
 
@@ -126,7 +144,7 @@ const Index = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
               {featuredProducts.map((product, index) => (
                 <Card key={index} className="bg-slate-800 border-slate-700">
                   <CardHeader className="pb-2">

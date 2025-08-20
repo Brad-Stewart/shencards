@@ -13,8 +13,9 @@ const Shop = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedSet, setSelectedSet] = useState("all");
 
-  // Sample product data - this would come from TCGPlayer API
+  // Expanded product data with realistic MTG inventory
   const products = [
+    // Popular Singles
     {
       id: 1,
       name: "Lightning Bolt",
@@ -28,20 +29,110 @@ const Shop = () => {
     },
     {
       id: 2,
-      name: "Black Lotus",
-      set: "Alpha",
-      price: 15000.00,
-      condition: "Played",
-      rarity: "Rare",
+      name: "Counterspell",
+      set: "Masters 25", 
+      price: 1.99,
+      condition: "Near Mint",
+      rarity: "Common",
       image: "/placeholder.svg",
       category: "singles",
-      description: "Add three mana of any one color."
+      description: "Counter target spell."
     },
     {
       id: 3,
-      name: "The Lord of the Rings Draft Booster",
-      set: "The Lord of the Rings",
-      price: 4.99,
+      name: "Sol Ring",
+      set: "Commander Masters",
+      price: 1.49,
+      condition: "Near Mint", 
+      rarity: "Uncommon",
+      image: "/placeholder.svg",
+      category: "singles",
+      description: "Add two colorless mana."
+    },
+    {
+      id: 4,
+      name: "Rhystic Study",
+      set: "Commander Masters",
+      price: 24.99,
+      condition: "Near Mint",
+      rarity: "Common",
+      image: "/placeholder.svg", 
+      category: "singles",
+      description: "Whenever an opponent casts a spell, you may draw a card."
+    },
+    {
+      id: 5,
+      name: "Force of Will",
+      set: "Eternal Masters",
+      price: 89.99,
+      condition: "Near Mint",
+      rarity: "Mythic Rare",
+      image: "/placeholder.svg",
+      category: "singles", 
+      description: "You may pay 1 life and exile a blue card rather than pay this spell's mana cost."
+    },
+    {
+      id: 6,
+      name: "Teferi, Time Raveler",
+      set: "War of the Spark",
+      price: 12.99,
+      condition: "Near Mint",
+      rarity: "Rare",
+      image: "/placeholder.svg",
+      category: "singles",
+      description: "Each opponent can cast spells only any time they could cast a sorcery."
+    },
+    {
+      id: 7,
+      name: "Mox Diamond",
+      set: "Stronghold",
+      price: 450.00,
+      condition: "Lightly Played",
+      rarity: "Rare",
+      image: "/placeholder.svg",
+      category: "singles",
+      description: "If Mox Diamond would enter the battlefield, you may discard a land card instead."
+    },
+    {
+      id: 8,
+      name: "Snapcaster Mage",
+      set: "Ultimate Masters",
+      price: 18.99,
+      condition: "Near Mint",
+      rarity: "Rare", 
+      image: "/placeholder.svg",
+      category: "singles",
+      description: "Flash. When Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard gains flashback."
+    },
+    {
+      id: 9,
+      name: "Craterhoof Behemoth",
+      set: "Jumpstart 2022",
+      price: 32.99,
+      condition: "Near Mint",
+      rarity: "Mythic Rare",
+      image: "/placeholder.svg",
+      category: "singles",
+      description: "Haste. When Craterhoof Behemoth enters the battlefield, creatures you control gain trample and get +X/+X until end of turn."
+    },
+    {
+      id: 10,
+      name: "Mana Crypt",
+      set: "Eternal Masters",
+      price: 189.99,
+      condition: "Near Mint",
+      rarity: "Mythic Rare",
+      image: "/placeholder.svg",
+      category: "singles",
+      description: "At the beginning of your upkeep, flip a coin. If you lose the flip, Mana Crypt deals 3 damage to you."
+    },
+
+    // Current Set Boosters
+    {
+      id: 11,
+      name: "Murders at Karlov Manor Draft Booster",
+      set: "Murders at Karlov Manor",
+      price: 4.49,
       condition: "Sealed",
       rarity: "N/A",
       image: "/placeholder.svg",
@@ -49,15 +140,197 @@ const Shop = () => {
       description: "Contains 15 cards including 1 rare or mythic rare."
     },
     {
-      id: 4,
-      name: "Commander Deck - Draconic Dissent",
-      set: "Commander Legends: Battle for Baldur's Gate",
-      price: 39.99,
+      id: 12,
+      name: "Murders at Karlov Manor Set Booster",
+      set: "Murders at Karlov Manor", 
+      price: 5.99,
+      condition: "Sealed",
+      rarity: "N/A",
+      image: "/placeholder.svg",
+      category: "boosters",
+      description: "Optimized for exciting pack opening experience."
+    },
+    {
+      id: 13,
+      name: "Murders at Karlov Manor Collector Booster",
+      set: "Murders at Karlov Manor",
+      price: 24.99,
+      condition: "Sealed",
+      rarity: "N/A",
+      image: "/placeholder.svg",
+      category: "boosters", 
+      description: "Premium booster with special treatments and showcase cards."
+    },
+    {
+      id: 14,
+      name: "The Lost Caverns of Ixalan Draft Booster",
+      set: "The Lost Caverns of Ixalan",
+      price: 4.25,
+      condition: "Sealed",
+      rarity: "N/A",
+      image: "/placeholder.svg",
+      category: "boosters",
+      description: "Explore underground civilizations and discover new treasures."
+    },
+    {
+      id: 15,
+      name: "Wilds of Eldraine Set Booster",
+      set: "Wilds of Eldraine",
+      price: 5.49,
+      condition: "Sealed", 
+      rarity: "N/A",
+      image: "/placeholder.svg",
+      category: "boosters",
+      description: "Return to the fairy tale plane of Eldraine."
+    },
+
+    // Commander Precons
+    {
+      id: 16,
+      name: "Deadly Disguise - Commander Deck",
+      set: "Murders at Karlov Manor",
+      price: 42.99,
       condition: "Sealed",
       rarity: "N/A",
       image: "/placeholder.svg",
       category: "precons",
-      description: "Ready-to-play 100-card Commander deck."
+      description: "Black/Blue face-down creatures and disguise mechanics."
+    },
+    {
+      id: 17,
+      name: "Revenant Recon - Commander Deck", 
+      set: "Murders at Karlov Manor",
+      price: 42.99,
+      condition: "Sealed",
+      rarity: "N/A",
+      image: "/placeholder.svg",
+      category: "precons",
+      description: "White/Black investigate and clue token synergies."
+    },
+    {
+      id: 18,
+      name: "Draconic Dissent - Commander Deck",
+      set: "Commander Legends: Battle for Baldur's Gate",
+      price: 38.99,
+      condition: "Sealed",
+      rarity: "N/A",
+      image: "/placeholder.svg",
+      category: "precons",
+      description: "Red/Green dragon tribal with goad mechanics."
+    },
+    {
+      id: 19,
+      name: "Explorers of the Deep - Commander Deck",
+      set: "The Lost Caverns of Ixalan",
+      price: 41.99,
+      condition: "Sealed",
+      rarity: "N/A",
+      image: "/placeholder.svg",
+      category: "precons",
+      description: "Blue/Green explore and merfolk tribal deck."
+    },
+    {
+      id: 20,
+      name: "Fae Dominion - Commander Deck",
+      set: "Wilds of Eldraine",
+      price: 40.99,
+      condition: "Sealed",
+      rarity: "N/A", 
+      image: "/placeholder.svg",
+      category: "precons",
+      description: "Blue/Black faerie tribal with flash and instant speed tricks."
+    },
+
+    // Accessories  
+    {
+      id: 21,
+      name: "Dragon Shield Card Sleeves - Matte Black",
+      set: "Accessories",
+      price: 12.99,
+      condition: "New",
+      rarity: "N/A",
+      image: "/placeholder.svg",
+      category: "accessories",
+      description: "Premium 100-count standard size card sleeves."
+    },
+    {
+      id: 22,
+      name: "Ultimate Guard Boulder Deck Case",
+      set: "Accessories",
+      price: 8.99,
+      condition: "New", 
+      rarity: "N/A",
+      image: "/placeholder.svg",
+      category: "accessories",
+      description: "Holds up to 80 sleeved cards securely."
+    },
+    {
+      id: 23,
+      name: "Ultra Pro Playmat - Magic Logo",
+      set: "Accessories",
+      price: 19.99,
+      condition: "New",
+      rarity: "N/A",
+      image: "/placeholder.svg",
+      category: "accessories",
+      description: "Official Magic: The Gathering playmat with stitched edges."
+    },
+    {
+      id: 24,
+      name: "KMC Perfect Fit Sleeves",
+      set: "Accessories", 
+      price: 4.99,
+      condition: "New",
+      rarity: "N/A",
+      image: "/placeholder.svg",
+      category: "accessories",
+      description: "Inner sleeves for double-sleeving protection."
+    },
+
+    // More High-Value Singles
+    {
+      id: 25,
+      name: "Gaea's Cradle",
+      set: "Urza's Saga",
+      price: 1250.00,
+      condition: "Near Mint",
+      rarity: "Rare",
+      image: "/placeholder.svg",
+      category: "singles",
+      description: "Add G for each creature you control."
+    },
+    {
+      id: 26,
+      name: "The One Ring",
+      set: "The Lord of the Rings",
+      price: 85.99,
+      condition: "Near Mint",
+      rarity: "Mythic Rare",
+      image: "/placeholder.svg",
+      category: "singles", 
+      description: "Indestructible. When The One Ring enters the battlefield, if you cast it, you gain protection from everything until your next turn."
+    },
+    {
+      id: 27,
+      name: "Sheoldred, the Apocalypse",
+      set: "Dominaria United",
+      price: 52.99,
+      condition: "Near Mint",
+      rarity: "Mythic Rare",
+      image: "/placeholder.svg",
+      category: "singles",
+      description: "Deathtouch. Whenever you draw a card, you gain 2 life. Whenever an opponent draws a card, they lose 2 life."
+    },
+    {
+      id: 28,
+      name: "Ragavan, Nimble Pilferer",
+      set: "Modern Horizons 2",
+      price: 67.99,
+      condition: "Near Mint",
+      rarity: "Mythic Rare",
+      image: "/placeholder.svg",
+      category: "singles",
+      description: "Whenever Ragavan deals combat damage to a player, create a Treasure token and exile the top card of that player's library."
     }
   ];
 
@@ -119,10 +392,22 @@ const Shop = () => {
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="all">All Sets</SelectItem>
-              <SelectItem value="Alpha">Alpha</SelectItem>
               <SelectItem value="Masters 25">Masters 25</SelectItem>
+              <SelectItem value="Commander Masters">Commander Masters</SelectItem>
+              <SelectItem value="Murders at Karlov Manor">Murders at Karlov Manor</SelectItem>
+              <SelectItem value="The Lost Caverns of Ixalan">The Lost Caverns of Ixalan</SelectItem>
+              <SelectItem value="Wilds of Eldraine">Wilds of Eldraine</SelectItem>
               <SelectItem value="The Lord of the Rings">The Lord of the Rings</SelectItem>
+              <SelectItem value="Dominaria United">Dominaria United</SelectItem>
+              <SelectItem value="Modern Horizons 2">Modern Horizons 2</SelectItem>
+              <SelectItem value="Eternal Masters">Eternal Masters</SelectItem>
+              <SelectItem value="War of the Spark">War of the Spark</SelectItem>
+              <SelectItem value="Urza's Saga">Urza's Saga</SelectItem>
+              <SelectItem value="Stronghold">Stronghold</SelectItem>
+              <SelectItem value="Ultimate Masters">Ultimate Masters</SelectItem>
+              <SelectItem value="Jumpstart 2022">Jumpstart 2022</SelectItem>
               <SelectItem value="Commander Legends: Battle for Baldur's Gate">Commander Legends</SelectItem>
+              <SelectItem value="Accessories">Accessories</SelectItem>
             </SelectContent>
           </Select>
 
