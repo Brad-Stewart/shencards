@@ -75,19 +75,6 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* CTA */}
-          <div className="text-center">
-            <Button 
-              size="lg" 
-              className="btn-business text-lg px-8 py-4"
-              asChild
-            >
-              <a href={`mailto:${content.contact.email}`} className="flex items-center">
-                <MessageCircle className="w-5 h-5 mr-2" />
-                Start a Conversation
-              </a>
-            </Button>
-          </div>
         </div>
       </div>
     </section>
