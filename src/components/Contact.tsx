@@ -27,8 +27,7 @@ export default function Contact() {
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
                 <p className="text-gray-600 text-sm mb-4">Get in touch directly</p>
                 <Button 
-                  variant="outline" 
-                  className="btn-outline-business"
+                  variant="outline-business"
                   asChild
                 >
                   <a href={`mailto:${content.contact.email}`}>
@@ -45,8 +44,7 @@ export default function Contact() {
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">LinkedIn</h3>
                 <p className="text-gray-600 text-sm mb-4">Professional network</p>
                 <Button 
-                  variant="outline" 
-                  className="border-gray-300 text-gray-700 hover:bg-gray-50"
+                  variant="outline-business"
                   asChild
                 >
                   <a href={content.contact.linkedin} target="_blank" rel="noopener noreferrer">
@@ -63,8 +61,7 @@ export default function Contact() {
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">GitHub</h3>
                 <p className="text-gray-600 text-sm mb-4">View my code</p>
                 <Button 
-                  variant="outline" 
-                  className="btn-outline-dev"
+                  variant="outline-business"
                   asChild
                 >
                   <a href={content.contact.github} target="_blank" rel="noopener noreferrer">
