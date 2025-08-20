@@ -84,7 +84,7 @@ const Index = () => {
                 <ShoppingBag className="h-5 w-5 mr-2" />
                 Shop Now
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900 text-lg px-8 py-3">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-3">
                 <Calendar className="h-5 w-5 mr-2" />
                 Join Next Event
               </Button>
@@ -201,7 +201,7 @@ const Index = () => {
                         <Users className="h-4 w-4 inline mr-1" />
                         {event.players}
                       </div>
-                      <Button size="sm" className="bg-green-600 hover:bg-green-700">
+                      <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white">
                         Register
                       </Button>
                     </div>
@@ -211,7 +211,7 @@ const Index = () => {
             </div>
             
             <div className="text-center">
-              <Button className="bg-purple-600 hover:bg-purple-700" size="lg">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white" size="lg">
                 View All Events
                 <ArrowRight className="h-4 w-4 ml-2" />
               </Button>

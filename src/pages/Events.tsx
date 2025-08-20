@@ -197,12 +197,12 @@ const Events = () => {
 
                   <div className="flex gap-2">
                     <Button 
-                      className="flex-1 bg-green-600 hover:bg-green-700"
+                      className="flex-1 bg-blue-600 hover:bg-blue-700 text-white"
                       disabled={event.registered >= event.capacity}
                     >
                       {event.registered >= event.capacity ? "Event Full" : "Register Now"}
                     </Button>
-                    <Button variant="outline" className="border-slate-600 text-white hover:bg-slate-700">
+                    <Button className="bg-blue-600 hover:bg-blue-700 text-white">
                       Details
                     </Button>
                   </div>
@@ -246,7 +246,7 @@ const Events = () => {
                         <span className={getStatusColor(event.status)}>Completed</span>
                       </div>
                     </div>
-                    <Button variant="outline" size="sm" className="border-slate-600 text-white hover:bg-slate-700">
+                    <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white">
                       View Results
                     </Button>
                   </div>

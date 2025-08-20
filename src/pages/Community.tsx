@@ -175,20 +175,18 @@ const Community = () => {
             {/* Format Filter */}
             <div className="flex flex-wrap gap-2 justify-center">
               <Button 
-                variant={selectedFormat === "all" ? "default" : "outline"}
                 size="sm"
                 onClick={() => setSelectedFormat("all")}
-                className={selectedFormat === "all" ? "bg-blue-600" : "border-slate-600 text-white hover:bg-slate-700"}
+                className="bg-blue-600 hover:bg-blue-700 text-white"
               >
                 All Formats
               </Button>
               {["Standard", "Commander", "Draft", "Modern", "Pioneer"].map((format) => (
                 <Button
                   key={format}
-                  variant={selectedFormat === format ? "default" : "outline"}
                   size="sm"
                   onClick={() => setSelectedFormat(format)}
-                  className={selectedFormat === format ? "bg-blue-600" : "border-slate-600 text-white hover:bg-slate-700"}
+                  className="bg-blue-600 hover:bg-blue-700 text-white"
                 >
                   {format}
                 </Button>
@@ -330,10 +328,10 @@ const Community = () => {
                   Share strategies, ask questions, and connect with fellow Magic players.
                 </p>
                 <div className="flex gap-4 justify-center">
-                  <Button className="bg-green-600 hover:bg-green-700">
+                  <Button className="bg-blue-600 hover:bg-blue-700 text-white">
                     Start New Discussion
                   </Button>
-                  <Button variant="outline" className="border-slate-600 text-white hover:bg-slate-700">
+                  <Button className="bg-blue-600 hover:bg-blue-700 text-white">
                     View All Topics
                   </Button>
                 </div>
@@ -350,16 +348,16 @@ const Community = () => {
               Follow us on social media for the latest updates, spoilers, and community highlights!
             </p>
             <div className="flex gap-4 justify-center">
-              <Button variant="outline" className="border-slate-600 text-white hover:bg-slate-700">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white">
                 Facebook
               </Button>
-              <Button variant="outline" className="border-slate-600 text-white hover:bg-slate-700">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white">
                 Discord
               </Button>
-              <Button variant="outline" className="border-slate-600 text-white hover:bg-slate-700">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white">
                 Instagram
               </Button>
-              <Button variant="outline" className="border-slate-600 text-white hover:bg-slate-700">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white">
                 Twitter/X
               </Button>
             </div>
