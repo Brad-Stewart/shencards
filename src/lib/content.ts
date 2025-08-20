@@ -43,28 +43,28 @@ I work primarily with JavaScript/TypeScript and Python, building dashboards, aut
       what: "Centralized reporting for throughput, quality, on-time %, and staffing vs demand.",
       how: "Google Sheets hub; automated CSV ingestion; Looker Studio dashboards; QA checks.",
       impact: "Reduced weekly reporting effort by ~70% and improved decision cadence.",
-      links: { demo: "#", repo: "#" }
+      links: { demo: null, repo: "https://github.com/Brad-Stewart", status: "in-development" }
     },
     {
       title: "Shift & Capacity Planner",
       what: "Planning tool aligning staffing with forecasted workload.",
       how: "Python recommendation engine; React UI for uploads and scenario modeling.",
       impact: "Fewer under/over-staffed hours and higher scheduling confidence.",
-      links: { demo: "#", repo: "#" }
+      links: { demo: null, repo: "https://github.com/Brad-Stewart", status: "planning" }
     },
     {
       title: "Call Summary & Action Extractor",
       what: "Upload a call recording and receive a structured summary with owners and due dates.",
       how: "Local speech-to-text pipeline, lightweight summarization, React front end.",
       impact: "Consistent notes in minutes; clearer follow-through and accountability.",
-      links: { demo: "#", repo: "#" }
+      links: { demo: null, repo: "https://github.com/Brad-Stewart", status: "coming-soon" }
     },
     {
       title: "Data Hygiene Utilities",
       what: "Utilities that deduplicate rows, normalize dates, and flag anomalies pre-reporting.",
       how: "Node/TypeScript CLI set packaged for Bun; configurable rules.",
       impact: "Cleaner inputs and fewer downstream corrections.",
-      links: { demo: null, repo: "#" }
+      links: { demo: null, repo: "https://github.com/Brad-Stewart", status: "available" }
     }
   ],
   contact: {

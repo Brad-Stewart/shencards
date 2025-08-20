@@ -21,8 +21,10 @@ export default function HeroSplit() {
             <div className="mb-6">
               <img 
                 src="/lovable-uploads/c66a1938-3fc8-4d7d-96de-c7ddbc167934.png" 
-                alt="Brad Stewart - Professional headshot" 
+                alt="Brad Stewart - Professional headshot showing a business professional in formal attire" 
                 className="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto object-cover border-4 border-white/30 shadow-lg"
+                loading="eager"
+                decoding="async"
               />
             </div>
             <div className="space-y-2">
@@ -40,7 +42,7 @@ export default function HeroSplit() {
               <Button 
                 variant="outline" 
                 size="lg"
-                className="btn-outline-business text-lg px-8 py-4 bg-white/10 backdrop-blur-sm hover:bg-white hover:text-business-primary border-white/30 hover:border-white"
+                className="btn-outline-business btn-enhanced text-lg px-8 py-4 bg-white/10 backdrop-blur-sm hover:bg-white hover:text-business-primary border-white/30 hover:border-white"
               >
                 View Business Impact
               </Button>
@@ -73,8 +75,10 @@ export default function HeroSplit() {
             <div className="mb-6">
               <img 
                 src="/lovable-uploads/95084d1d-6e6d-4d1a-ace1-e24e5bd97af9.png" 
-                alt="Brad Stewart - Casual headshot" 
+                alt="Brad Stewart - Casual headshot showing a programmer in a relaxed setting" 
                 className="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto object-cover border-4 border-dev-accent/50 shadow-lg"
+                loading="eager"
+                decoding="async"
               />
             </div>
             <div className="space-y-2">
@@ -92,7 +96,7 @@ export default function HeroSplit() {
               <Button 
                 variant="outline" 
                 size="lg"
-                className="btn-outline-dev text-lg px-8 py-4 bg-dev-accent/10 backdrop-blur-sm hover:bg-dev-accent hover:text-white border-dev-accent/50 hover:border-dev-accent"
+                className="btn-outline-dev btn-enhanced text-lg px-8 py-4 bg-dev-accent/10 backdrop-blur-sm hover:bg-dev-accent hover:text-white border-dev-accent/50 hover:border-dev-accent"
               >
                 View Technical Work
               </Button>
