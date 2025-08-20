@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -7,6 +8,8 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 const Index = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     document.title = "Shenanigan's CardStop - Premier Magic: The Gathering Store";
     
@@ -98,11 +101,11 @@ const Index = () => {
               we've been serving planeswalkers since 2015 with passion and expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-3">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-3" onClick={() => navigate('/shop')}>
                 <ShoppingBag className="h-5 w-5 mr-2" />
                 Shop Now
               </Button>
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-3">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-3" onClick={() => navigate('/events')}>
                 <Calendar className="h-5 w-5 mr-2" />
                 Join Next Event
               </Button>
@@ -164,7 +167,7 @@ const Index = () => {
                   <CardContent>
                     <div className="flex items-center justify-between">
                       <span className="text-2xl font-bold text-green-400">${product.price}</span>
-                      <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
+                      <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white" onClick={() => navigate('/shop')}>
                         Add to Cart
                       </Button>
                     </div>
@@ -174,7 +177,7 @@ const Index = () => {
             </div>
             
             <div className="text-center">
-              <Button className="bg-blue-600 hover:bg-blue-700" size="lg">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white" size="lg" onClick={() => navigate('/shop')}>
                 View All Products
                 <ArrowRight className="h-4 w-4 ml-2" />
               </Button>
@@ -219,7 +222,7 @@ const Index = () => {
                         <Users className="h-4 w-4 inline mr-1" />
                         {event.players}
                       </div>
-                      <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white">
+                      <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white" onClick={() => navigate('/events')}>
                         Register
                       </Button>
                     </div>
@@ -229,7 +232,7 @@ const Index = () => {
             </div>
             
             <div className="text-center">
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white" size="lg">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white" size="lg" onClick={() => navigate('/events')}>
                 View All Events
                 <ArrowRight className="h-4 w-4 ml-2" />
               </Button>
